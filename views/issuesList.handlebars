@@ -1,0 +1,39 @@
+<div class="toplinks">
+  <a class="active" href="/lobby">Home</a>
+  <a class="links" href="/logout">Logout</a>
+  <a class="links" href="/userBudget">Budgets</a>
+  <a class="links" href="/userIssues">Vote</a>
+</div>
+<br>
+<br>
+<br>
+<div class="skinny_logo">
+  <img src="/static/skinny_logo.jpg"></img>
+</div>
+<br>
+<br>
+
+<div class="vote">
+  <p style="text-decoration:underline; font-size:24px">Issues: District #{{district}}</p>
+  <p><em>Choose an issue to view.</em></p>
+  <hr>
+  <!--Table-->
+  <table>
+    <thead>
+      <tr>
+        <th>Issue #</th>
+        <th>Description</th>
+        <!--<th>Closing date</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      {{#each userIssues}}
+      <tr>
+        <td style="width:15%">{{issue_id}}</td>
+        <td style="width:70%">{{description}}</td>
+        <td style="width:15%"><button class="issue_button"><a href="/userIssues/{{issue_id}}">View</a></button></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

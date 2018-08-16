@@ -1,0 +1,18 @@
+<br>
+<div class="logo">
+  <img src="/static/logo.jpg"></img>
+</div>
+<br>
+<form action="/reset" method="post">
+  <fieldset>
+    <p style="font-size:24px">Create New Password</p>
+    <p><em>Please enter a new password.</em></p>
+    <hr>
+    <input type="hidden" name="username" value="{{username}}"><br>
+    <label>Password: </label>
+    <input type="password" name="password" placeholder="password"><br>
+    <br>
+    <label></label>
+    <input class="update-button" type="submit" value="Update">
+  </fieldset>
+</form>

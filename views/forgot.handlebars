@@ -1,0 +1,26 @@
+<br>
+<div class="logo">
+  <img src="/static/logo.jpg"></img>
+</div>
+<br>
+<form action="/validateIdentity" method="post">
+  <fieldset>
+    <p style="font-size:24px">Reset Password</p>
+    <p><em>Please enter the following information.</em></p>
+    <hr>
+    <label>First Name: </label>
+    <input type="text" name="userFname" placeholder="George"><br>
+    <br>
+    <label>Last Name: </label>
+    <input type="text" name="userLname" placeholder="Washington"><br>
+    <br>
+    <label>D.O.B.: </label>
+    <input type="date" name="userDOB"><br>
+    <br>
+    <label>SSN: </label>
+    <input type="number" name="userSSN" placeholder="123456789"><br>
+    <br>
+    <label></label>
+    <input class="reset-button" type="submit" value="Reset">
+  </fieldset>
+</form>

@@ -1,0 +1,34 @@
+<div class="toplinks">
+  <a class="active" href="/lobby">Home</a>
+  <a class="links" href="/logout">Logout</a>
+  <a class="links" href="/userBudget">Budgets</a>
+  <a class="links" href="/userIssues">Vote</a>
+</div>
+<br>
+<br>
+<br>
+<div class="skinny_logo">
+  <img src="/static/skinny_logo.jpg"></img>
+</div>
+<br>
+<br>
+
+
+<form action="/vote" method="put">
+  <fieldset>
+    <p><span style="text-decoration: underline">Issue {{issue_id}}</span>: <em>{{desc}}</em></p>
+    <p><em>You have already voted {{choiceDesc}} for this issue. To update your vote, make a selection and resubmit.</em></p>
+    <hr>
+    <input type="hidden" name="issue_id" value={{issue_id}}><br>
+    <label>Choice: </label>
+      <select name="choice">
+          <option selected disabled hidden>Select</option>
+        {{#each issue}}
+          <option value="{{choice}}">{{description}}</option>
+        {{/each}}
+      </select><br>
+    <br>
+    <label></label>
+    <input class="submit-button" type="submit" value="Update Vote">
+  </fieldset>
+</form>
